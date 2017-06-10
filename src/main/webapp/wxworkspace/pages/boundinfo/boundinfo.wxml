@@ -1,0 +1,79 @@
+<view class="container more" style="back">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="my">
+
+      <view class="my-item">
+        <view class="weui-cells__title flex-wrp" style="flex-direction:row;">
+        </view>
+        <view class="weui-cells weui-cells_after-title myitem-picker" style="font-size:14px;margin-top:10rpx;padding-top:10rpx;padding-bottom:10rpx">
+          <view class="weui-cell weui-cell_input">
+            请绑定公共数据库账号，只可绑定一次
+          </view>
+        </view>
+
+      </view>
+
+      <view class="my-item">
+        <view class="weui-cells__title flex-wrp" style="flex-direction:row;">
+          <view class="flex-item myitem-icon">
+            <image src="../../images/item.png"></image>
+          </view>
+          <view class="flex-item myitem-name">请选择预订日期</view>
+        </view>
+        <view class="weui-cells weui-cells_after-title myitem-picker">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">当前选择</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+      当前选择: {{time}}
+    </view>
+  </picker>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="my-item">
+        <view class="weui-cells__title flex-wrp" style="flex-direction:row;">
+          <view class="flex-item myitem-icon">
+            <image src="../../images/item.png"></image>
+          </view>
+          <view class="flex-item myitem-name">账号</view>
+        </view>
+        <view class="weui-cells weui-cells_after-title myitem-picker">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input name="id" placeholder="公共数据库账号" auto-focus/>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="my-item">
+        <view class="weui-cells__title flex-wrp" style="flex-direction:row;">
+          <view class="flex-item myitem-icon">
+            <image src="../../images/item.png"></image>
+          </view>
+          <view class="flex-item myitem-name">密码</view>
+        </view>
+        <view class="weui-cells weui-cells_after-title myitem-picker">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input name="pwd" password placeholder="公共数据库密码" type="text" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="my-item">
+        <button form-type="submit" type="default" loading="{{loading}}">提交</button>
+      </view>
+    </view>
+
+  </form>
+</view>

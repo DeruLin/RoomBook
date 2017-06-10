@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/book/book",
+    "pages/logs/logs",
+    "pages/boundinfo/boundinfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0068C4",
+    "navigationBarTitleText": "roombook",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  }
+}

@@ -1,0 +1,31 @@
+<view class="container more">
+
+  <view class="user flex-wrp">
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nameinfo">{{userInfo.nickName}} {{studentName}}</text>
+      <text class="welcome">欢迎使用房间预订小程序</text>
+    </view>
+  </view>
+
+  <scroll-view scroll-y="true" class="container" style="max-height:800rpx">
+    <block wx:for="{{bookInfoList}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view class="feed-item">
+        <view class="feed-source">
+          <text>{{item.roomName}}</text>
+        </view>
+        <view class="feed-source">
+          <text>{{item.date}} {{item.startTime}}~{{item.endTime}}</text>
+          <text>{{item.status}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="feed-item">
+    <button bindtap="startBook">开始预定</button>
+  </view>
+
+</view>
